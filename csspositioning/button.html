@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pure css Navbar</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+        }
+        
+        .navbar{
+            position: sticky;
+            top: 0;
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;}
+
+            .nav-links{
+                display: flex;
+                gap: 15px;
+            }
+
+            .nav-links a {
+                color: white;
+                text-decoration: none;
+                padding: 8px;
+            }
+
+            .nav-links a:hover{
+                background-color: black;
+            }
+
+            #menu-toggle{
+                display: none;
+            }
+            
+            .menu-icon{
+                display: none;
+                cursor: pointer;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .menu-icon span{
+                background:white;
+                width: 25px;
+                height: 3px;
+            }
+            @media (max-width:768px) {
+                .nav-links{
+                    display: none;
+                    flex-direction: column;
+                    background-color: black;
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    width: 100%;
+                }
+                #menu-toggle:checked + .menu-icon + .nav-links{
+                    display: flex;
+                }
+                .menu-icon{
+                    display: flex;
+                }
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand">hamza</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <a href="#">home</a>
+            <a href="#">shop</a>
+            <a href="#">about</a>
+            <a href="#">contact</a>
+        </div>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css display type</title>
+    <style>
+        .block-example{
+            display: block;
+            background-color: aquamarine;
+            padding: 20px;
+            margin-bottom: 5px;
+        }
+        .inline-example{
+            display: inline;
+            background: blueviolet;
+            padding: 10px;
+        }
+        .inline-block-display{
+            display: inline-block;
+            background-color: aliceblue;
+            padding: 10px;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+        }
+        .none-example{
+            display: none;
+            background-color: burlywood;
+            padding: 20px;
+        }
+        .body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .section{
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>css display property</h1>
+    <div class="section">
+        <h2>1. Block display</h2>
+        <div class="block-example">i am a block example</div>
+    <div class="block-example"> i appear below the previous block</div>
+    <div class="block-example">appear after seconds</div>
+    </div>
+    <div class="section">
+        <h2>2. Inline display </h2>
+
+        <div
+            class="inline-example"> inline 1</div>
+        <div
+             class="inline-example">inline 2</div>
+              </div>
+
+             <div class="section">
+                <h3>inline-block-display</h3>
+                <span class="inline-block-display">box 1</span>
+                <span
+                class="inline-block-display">box 2</span>
+             </div>
+             <div class="section">
+                <h4>3.none example</h4>
+                <span class="none-example">you wont see me</span>
+             </div>
+             
+
+    </div>
+</body>
+</html>
